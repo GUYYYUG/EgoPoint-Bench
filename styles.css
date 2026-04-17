@@ -131,19 +131,20 @@ img {
 .authors {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 12px;
-  margin: 24px 0 12px;
+  gap: 6px 10px;
+  margin: 24px auto 12px;
   justify-content: center;
-  font-size: 1rem;
-  color: var(--muted);
+  max-width: 940px;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color: var(--text);
 }
 
 .authors span {
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(28, 24, 20, 0.08);
-  color: var(--text);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
 }
 
 .authors sup,
@@ -155,7 +156,8 @@ img {
 
 .affiliation-block {
   display: grid;
-  gap: 2px;
+  gap: 4px;
+  margin-top: 2px;
 }
 
 .affiliation,
@@ -166,9 +168,13 @@ img {
   text-align: center;
 }
 
+.affiliation {
+  font-size: 0.98rem;
+}
+
 .author-note {
-  margin-top: 4px;
-  font-size: 0.95rem;
+  margin-top: 2px;
+  font-size: 0.92rem;
 }
 
 .cta-group {
