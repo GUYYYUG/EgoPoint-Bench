@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EgoPoint-Bench</title>
+    <meta
+      name="description"
+      content="EgoPoint-Bench: Benchmarking and Enhancing Referential Reasoning in Egocentric Vision."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">ACL 2026 Findings</p>
+          <h1 class="hero-title">
+            <span class="hero-title-top">Do MLLMs Understand Pointing?</span>
+            <span class="hero-title-bottom">Benchmarking and Enhancing Referential Reasoning in Egocentric Vision</span>
+          </h1>
+          <p class="authors">
+            Replace with your final author list:
+            <span>Author One</span>
+            <span>Author Two</span>
+            <span>Author Three</span>
+            <span>Author Four</span>
+          </p>
+          <p class="affiliation">Replace with your affiliation line, lab name, or institution.</p>
+          <div class="cta-group">
+            <a class="cta primary" href="https://github.com/GUYYYUG/EgoPoint" target="_blank" rel="noreferrer">Code</a>
+            <a class="cta" href="./mini_dataset.json" target="_blank" rel="noreferrer">Dataset</a>
+            <a class="cta" href="#paper-link-note">Paper</a>
+          </div>
+          <p class="link-note" id="paper-link-note">
+            Update the `Paper` button in <code>index.html</code> with your public PDF, arXiv, or Anthology link.
+          </p>
+        </div>
+        <div class="hero-panel">
+          <div class="stat-grid hero-stats">
+            <article class="stat-card">
+              <strong>11,729 QA samples</strong>
+              <span>Built from both large-scale simulation and real-world egocentric capture.</span>
+            </article>
+            <article class="stat-card">
+              <strong>Basic Perception to Adversarial Resilience</strong>
+              <span>Coverage spans perception, function and state, spatial context, OCR, and robustness under misleading references.</span>
+            </article>
+            <article class="stat-card">
+              <strong>L1 to L3 deixis</strong>
+              <span>From explicit pointing expressions to visually grounded but fully implicit pronouns.</span>
+            </article>
+            <article class="stat-card">
+              <strong>Sim-to-Real benchmark design</strong>
+              <span>Structured to support both evaluation and model improvement for grounded referential reasoning.</span>
+            </article>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section intro">
+          <div class="section-heading">
+            <p class="section-kicker">Overview + Motivation</p>
+            <h2>Why egocentric pointing remains hard for current MLLMs</h2>
+          </div>
+          <div class="two-column">
+            <div class="intro-copy">
+              <p class="lead">
+                EgoPoint-Bench evaluates multimodal pointing reasoning in egocentric vision. It targets
+                a core failure mode we call <strong>referential hallucination</strong>: models answer
+                about nearby or visually salient objects instead of the true referent indicated by a
+                first-person pointing gesture.
+              </p>
+              <p>
+                This failure is especially common in egocentric scenes, where hand proximity, clutter,
+                and partial visibility make naive visual grounding unreliable. EgoPoint-Bench is built
+                to expose that gap directly, rather than treating pointing as generic visual QA.
+              </p>
+              <p>
+                The benchmark combines a scalable simulation pipeline with real-world capture, covering
+                basic perception, function and state, spatial context, OCR, and adversarial resilience.
+              </p>
+            </div>
+            <figure class="feature-figure intro-figure">
+              <img src="./paper_img/teaser.png" alt="Teaser showing referential hallucination in egocentric pointing scenarios." />
+              <figcaption>
+                In egocentric pointing scenes, current MLLMs often predict plausible but incorrect
+                referents, focusing on nearby or salient distractors instead of the object truly indicated
+                by the pointing gesture. This referential hallucination phenomenon motivates EgoPoint-Bench.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section figure-section">
+          <div class="section-heading">
+            <p class="section-kicker">Pipeline</p>
+            <h2>From Point-Sim supervision to real-world evaluation</h2>
+          </div>
+          <figure class="feature-figure wide">
+            <img src="./paper_img/egopoint-overview.png" alt="Overview of the EgoPoint-Bench data construction pipeline." />
+            <figcaption>
+              EgoPoint-Bench integrates simulation, real capture, and capability-oriented annotation for
+              grounded egocentric pointing QA.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="section cards-section">
+          <div class="section-heading">
+            <p class="section-kicker">Highlights</p>
+            <h2>What the benchmark covers</h2>
+          </div>
+          <div class="highlight-grid">
+            <article class="info-card">
+              <h3>Capability Taxonomy</h3>
+              <p>Five evaluation dimensions: Basic Perception, Function &amp; State, Spatial Context, OCR, and Adversarial Resilience.</p>
+            </article>
+            <article class="info-card">
+              <h3>Hierarchical Deixis</h3>
+              <p>Three deixis levels capture the ambiguity spectrum from explicit reference to fully implicit pronouns.</p>
+            </article>
+            <article class="info-card">
+              <h3>Mixed Question Format</h3>
+              <p>Multiple-choice, true/false, and open-ended questions balance objective benchmarking with realistic user intent.</p>
+            </article>
+            <article class="info-card">
+              <h3>Sim-to-Real Focus</h3>
+              <p>The dataset is constructed to support training and transfer, not just static leaderboard evaluation.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section gallery-section">
+          <div class="figure-row">
+            <figure class="feature-figure">
+              <img src="./paper_img/deixis_level.png" alt="Distribution of deixis levels in the benchmark." />
+              <figcaption>Distribution of deixis levels across simulated and real subsets.</figcaption>
+            </figure>
+            <figure class="feature-figure">
+              <img src="./paper_img/answer_statistics.png" alt="Distribution of answer types in the training set." />
+              <figcaption>Answer-type statistics show balanced question construction without strong answer bias.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section sample-section">
+          <div class="section-heading">
+            <p class="section-kicker">Examples</p>
+            <h2>Mini dataset preview</h2>
+          </div>
+          <div class="sample-grid">
+            <figure class="sample-card">
+              <img src="./mini_dataset_img/real_9.jpg" alt="Sample real-world pointing example from EgoPoint-Bench." />
+              <figcaption>Real-world sample</figcaption>
+            </figure>
+            <figure class="sample-card">
+              <img src="./mini_dataset_img/sim_52.jpg" alt="Sample simulation pointing example from EgoPoint-Bench." />
+              <figcaption>Simulation sample</figcaption>
+            </figure>
+            <figure class="sample-card">
+              <img src="./mini_dataset_img/real_41.jpg" alt="Another real-world pointing example from EgoPoint-Bench." />
+              <figcaption>Hard visual grounding case</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section figure-section">
+          <div class="section-heading">
+            <p class="section-kicker">Failure Mode</p>
+            <h2>Referential hallucination is visually plausible but wrong</h2>
+          </div>
+          <div class="two-column figure-copy">
+            <p>
+              Beyond the teaser examples, the error pattern is consistent: strong multimodal models often
+              confuse the intended referent with objects close to the hand, along cluttered shelves, or in
+              visually dominant regions.
+            </p>
+            <p>
+              EgoPoint-Bench is designed to measure this failure directly and to support methods that
+              improve grounded gesture reasoning under real egocentric ambiguity.
+            </p>
+          </div>
+          <figure class="feature-figure wide">
+            <img src="./paper_img/error_lora.png" alt="Examples showing referential hallucination errors." />
+            <figcaption>Illustrative failure cases where base models choose plausible distractors while fine-tuned models recover the intended referent.</figcaption>
+          </figure>
+        </section>
+
+        <section class="section footer-card">
+          <div>
+            <p class="section-kicker">Access</p>
+            <h2>Public GitHub Pages ready</h2>
+          </div>
+          <p>
+            This page is a pure static site. Once pushed to a public GitHub repository and published with
+            GitHub Pages, anyone can open it directly in a browser without login or backend services.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
