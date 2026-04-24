@@ -91,6 +91,12 @@ img {
   text-align: center;
 }
 
+.hero-brand-logo {
+  width: min(100%, 640px);
+  margin: 0 auto 14px;
+  height: auto;
+}
+
 .hero h1,
 .section h2 {
   margin: 0;
