@@ -398,9 +398,7 @@ main {
 }
 
 .sample-slider {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
+  display: flex;
   gap: 14px;
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -411,6 +409,7 @@ main {
 }
 
 .sample-slider .sample-card {
+  flex: 0 0 100%;
   scroll-snap-align: start;
   aspect-ratio: 16 / 9;
   display: flex;
