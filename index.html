@@ -177,19 +177,48 @@
             <p class="section-kicker">Examples</p>
             <h2>Mini dataset preview</h2>
           </div>
-          <div class="sample-grid">
-            <figure class="sample-card">
-              <img src="./mini_dataset_img/real_9.jpg" alt="Sample real-world pointing example from EgoPoint-Bench." />
-              <figcaption>Real-world sample</figcaption>
-            </figure>
-            <figure class="sample-card">
-              <img src="./mini_dataset_img/sim_52.jpg" alt="Sample simulation pointing example from EgoPoint-Bench." />
-              <figcaption>Simulation sample</figcaption>
-            </figure>
-            <figure class="sample-card">
-              <img src="./mini_dataset_img/real_41.jpg" alt="Another real-world pointing example from EgoPoint-Bench." />
-              <figcaption>Hard visual grounding case</figcaption>
-            </figure>
+          <div class="sample-columns">
+            <article class="sample-lane">
+              <h3>Real-world subset</h3>
+              <div class="sample-carousel">
+                <div class="sample-slider" aria-label="Real-world samples">
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/real_7.jpg" alt="Real-world pointing sample 7 from EgoPoint-Bench." />
+                </figure>
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/real_10.jpg" alt="Real-world pointing sample 10 from EgoPoint-Bench." />
+                </figure>
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/real_20.jpg" alt="Real-world pointing sample 20 from EgoPoint-Bench." />
+                </figure>
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/real_36.jpg" alt="Real-world pointing sample 36 from EgoPoint-Bench." />
+                </figure>
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/real_41.jpg" alt="Real-world pointing sample 41 from EgoPoint-Bench." />
+                </figure>
+                </div>
+              </div>
+            </article>
+            <article class="sample-lane">
+              <h3>Simulation subset</h3>
+              <div class="sample-carousel">
+                <div class="sample-slider" aria-label="Simulation samples">
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/sim_12.jpg" alt="Simulation pointing sample 12 from EgoPoint-Bench." />
+                </figure>
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/sim_15.jpg" alt="Simulation pointing sample 15 from EgoPoint-Bench." />
+                </figure>
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/sim_32.jpg" alt="Simulation pointing sample 32 from EgoPoint-Bench." />
+                </figure>
+                <figure class="sample-card">
+                  <img src="./mini_dataset_img/sim_52.jpg" alt="Simulation pointing sample 52 from EgoPoint-Bench." />
+                </figure>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -215,15 +244,47 @@
           </figure>
         </section>
 
-        <section class="section footer-card">
-          <div>
-            <p class="section-kicker">Access</p>
-            <h2>Public GitHub Pages ready</h2>
+        <section class="section figure-section">
+          <div class="section-heading">
+            <p class="section-kicker">Main Results</p>
+            <h2>Simulation tuning improves egocentric deictic reasoning and transfers to real-world scenes</h2>
           </div>
-          <p>
-            This page is a pure static site. Once pushed to a public GitHub repository and published with
-            GitHub Pages, anyone can open it directly in a browser without login or backend services.
-          </p>
+          <figure class="feature-figure wide">
+            <img src="./paper_img/table2.png" alt="Table 2 results on simulation and real-world testsets for proprietary and open-source models." />
+            <figcaption>
+              Table 2 compares direct inference and LoRA tuning across proprietary and open-source models on both simulation and real-world testsets.
+            </figcaption>
+          </figure>
+          <div class="highlight-grid results-grid">
+            <article class="info-card">
+              <h3>Off-the-shelf Limits</h3>
+              <p>Directly prompted VLMs remain weak on fine-grained egocentric deictic understanding, especially under ambiguity and distractors.</p>
+            </article>
+            <article class="info-card">
+              <h3>Large Gains from Simulation</h3>
+              <p>Simulation-based LoRA tuning delivers consistent and often substantial gains over direct inference across most open-source backbones.</p>
+            </article>
+            <article class="info-card">
+              <h3>Effective Sim-to-Real Transfer</h3>
+              <p>Performance improvements learned in simulation largely carry over to real-world data, indicating strong practical generalization.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section citation-block">
+          <div class="section-heading">
+            <p class="section-kicker">Citation</p>
+            <h2>BibTeX</h2>
+          </div>
+          <pre><code>@misc{li2026mllmsunderstandpointingbenchmarking,
+  title={Do MLLMs Understand Pointing? Benchmarking and Enhancing Referential Reasoning in Egocentric Vision},
+  author={Chentao Li and Zirui Gao and Mingze Gao and Yinglian Ren and Jianjiang Feng and Jie Zhou},
+  year={2026},
+  eprint={2604.21461},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2604.21461},
+}</code></pre>
         </section>
       </main>
     </div>
